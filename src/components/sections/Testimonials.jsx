@@ -86,7 +86,7 @@ const Testimonials = () => {
           <div className="flex justify-center mt-8 gap-4">
             <button 
               onClick={prev}
-              className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+              className="p-2 rounded-full bg-black hover:bg-blue-700 transition"
               aria-label="Previous testimonial"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,7 +107,7 @@ const Testimonials = () => {
             
             <button 
               onClick={next}
-              className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+              className="p-2 rounded-full bg-black hover:bg-blue-700 transition"
               aria-label="Next testimonial"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,15 +116,6 @@ const Testimonials = () => {
             </button>
           </div>
           
-          {/* Logo cloud */}
-          <div className="mt-16">
-            <p className="text-center text-gray-500 mb-6">Trusted by innovative companies</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              {[...Array(4)].map((_, idx) => (
-                <div key={idx} className="h-12 bg-gray-200 rounded-md opacity-60"></div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

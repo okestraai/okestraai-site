@@ -7,7 +7,7 @@ import { ReactNode } from 'react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'AI Assistant Platform | Your Poly Clone',
+  title: 'Okestra AI',
   description: 'Enterprise conversational AI that actually works.',
 };
 

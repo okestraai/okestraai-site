@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 sm:mb-0">© 2025 AI Clone. All rights reserved.</p>
+          <p className="text-gray-500 text-sm mb-4 sm:mb-0">© 2025 Okestra AI. All rights reserved.</p>
           <div className="flex space-x-6">
             <Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Privacy Policy</Link>
             <Link href="#" className="text-gray-500 hover:text-indigo-600 text-sm">Terms of Service</Link>
