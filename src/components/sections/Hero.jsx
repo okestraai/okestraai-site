@@ -2,8 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
+import Modal from '../Modal'; // Assuming you have a Modal component
+import ModalContent from '../ModalContent';
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+
+  
   return (
     <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 relative overflow-hidden bg-gradient-to-br from-violet-50 to-indigo-50">
       {/* Background Elements */}
@@ -74,18 +80,17 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <a 
-                href="/demo" 
-                className="px-8 py-3.5 bg-indigo-600 text-white text-center rounded-lg hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20"
-              >
-                Try Demo
-              </a>
-              <a 
-                href="/contact" 
-                className="px-8 py-3.5 border border-indigo-600 text-indigo-600 text-center rounded-lg hover:bg-indigo-50 transition"
-              >
-                Contact Sales
-              </a>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="px-8 py-3.5 bg-indigo-600 text-white text-center rounded-lg hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20"
+            >
+              Try Demo
+            </button>
+            <a 
+              href="/contact" className="px-8 py-3.5 border border-indigo-600 text-indigo-600 text-center rounded-lg hover:bg-indigo-50 transition"
+            >
+              Contact Sales
+            </a>
             </motion.div>
           </div>
           
@@ -182,8 +187,13 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ModalContent onClose={() => setIsModalOpen(false)} />
+      </Modal>
     </section>
   );
 };
+
 
 export default Hero;
