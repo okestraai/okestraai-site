@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ export default function Contact() {
                 >
                     <h2 className="text-3xl font-extrabold mb-4">Contact Okestra AI</h2>
                     <p className="mb-8 text-indigo-100">
-                        Let’s talk about how Okestra AI can help your business. Fill out the form or reach us directly.
+                        Let&apos;s talk about how Okestra AI can help your business. Fill out the form or reach us directly.
                     </p>
                     <div className="space-y-6 text-indigo-100">
                         <div>
@@ -53,10 +54,22 @@ export default function Contact() {
                     </div>
                     <div className="flex gap-4 mt-8">
                         <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="/download.png" alt="LinkedIn" className="h-7 hover:scale-110 transition" />
+                            <Image 
+                                src="/download.png" 
+                                alt="LinkedIn" 
+                                width={28} 
+                                height={28} 
+                                className="hover:scale-110 transition" 
+                            />
                         </a>
                         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="/download.png" alt="Twitter" className="h-7 hover:scale-110 transition" />
+                            <Image 
+                                src="/download.png" 
+                                alt="Twitter" 
+                                width={28} 
+                                height={28} 
+                                className="hover:scale-110 transition" 
+                            />
                         </a>
                         {/* Add more social icons as needed */}
                     </div>

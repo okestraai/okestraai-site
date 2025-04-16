@@ -7,9 +7,21 @@ const DemoSection = () => {
   const [activeDemo, setActiveDemo] = useState('customer-service');
   
   const demoOptions = [
-    { id: 'customer-service', label: 'Customer Service' },
-    { id: 'sales', label: 'Sales' },
-    { id: 'appointments', label: 'Appointment Booking' }
+    { 
+      id: 'Paystack Custommer Support', 
+      label: 'Paystack Custommer Support',
+      videoSrc: '/demo-vid.webm' // You can add more video sources here
+    },
+    { 
+      id: 'Paystack Custommer Telegram', 
+      label: 'Paystack Custommer Telegram',
+      videoSrc: '/demo-vid.webm' // Replace with actual sales demo video
+    },
+    { 
+      id: 'Paystack Customer Support with Voice Transcriptions', 
+      label: 'Paystack Customer Support with Voice Transcriptions',
+      videoSrc: '/demo-vid.webm' // Replace with actual appointments demo video
+    }
   ];
   
   return (
@@ -64,9 +76,21 @@ const DemoSection = () => {
               <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Live Demo</span>
             </div>
             
-            <div className="h-96 bg-gray-50 rounded-lg flex items-center justify-center">
-              {/* This would be where your actual demo interface goes */}
-              <p className="text-gray-500">Interactive demo interface for {demoOptions.find(o => o.id === activeDemo)?.label}</p>
+            <div className="h-96 bg-gray-50 rounded-lg flex items-center justify-center overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source 
+                  src={demoOptions.find(o => o.id === activeDemo)?.videoSrc} 
+                  type="video/webm" 
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </motion.div>
         </div>
