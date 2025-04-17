@@ -1,9 +1,15 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Modal from '../Modal'; // Import the Modal component
+import ModalContent from '../ModalContent'; // Import the ModalContent component
 
 const CTA = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+
+
   return (
     <section className="py-20 bg-indigo-600 relative overflow-hidden">
       {/* Background Elements */}
@@ -29,12 +35,12 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/demo" 
-              className="px-8 py-4 bg-white text-indigo-600 font-medium rounded-lg shadow-md hover:shadow-xl transition text-center"
-            >
-              Try Demo
-            </Link>
+            <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-4 py-2.5 bg-black text-white rounded-lg text-center hover:bg-white hover:text-indigo-700 transition"
+              >
+                Request Demo
+            </button>
             <Link 
               href="/contact" 
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition text-center"
@@ -44,6 +50,10 @@ const CTA = () => {
           </div>
         </motion.div>
       </div>
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ModalContent onClose={() => setIsModalOpen(false)} />
+      </Modal>
     </section>
   );
 };
