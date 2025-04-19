@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import React from "react";
 import { motion } from "framer-motion";
 import Modal from '../../../components/Modal'; // Import the Modal component
@@ -319,7 +319,7 @@ export default function AgentStudio() {
                 </svg>
               </div>
               <p className="text-gray-600 mb-6">
-                "Implementing voice agents with Poly.ai has transformed our customer service. We've reduced wait times by 85% while maintaining a 92% CSAT score."
+                &quot;Implementing voice agents with Poly.ai has transformed our customer service. We&apos;ve reduced wait times by 85% while maintaining a 92% CSAT score.&quot;
               </p>
               <div>
                 <h4 className="font-semibold text-gray-900">Sarah Johnson</h4>
@@ -340,7 +340,7 @@ export default function AgentStudio() {
                 </svg>
               </div>
               <p className="text-gray-600 mb-6">
-                "The Agent Studio platform made it incredibly easy to design and deploy sophisticated voice AI. We were live in weeks instead of months."
+                &quot;The Agent Studio platform made it incredibly easy to design and deploy sophisticated voice AI. We were live in weeks instead of months.&quot;
               </p>
               <div>
                 <h4 className="font-semibold text-gray-900">Michael Chen</h4>
@@ -361,7 +361,7 @@ export default function AgentStudio() {
                 </svg>
               </div>
               <p className="text-gray-600 mb-6">
-                "Our customers can't tell they're talking to an AI agent. The natural conversations and problem-solving abilities have exceeded our expectations."
+                &quot;Our customers can&apos;t tell they&apos;re talking to an AI agent. The natural conversations and problem-solving abilities have exceeded our expectations.&quot;
               </p>
               <div>
                 <h4 className="font-semibold text-gray-900">Emma Rodriguez</h4>
@@ -381,7 +381,7 @@ export default function AgentStudio() {
                 Ready to transform your customer experience?
               </h2>
               <p className="text-purple-100 mb-8">
-                Join leading enterprises using Poly.ai's Agent Studio to deliver exceptional AI-powered voice interactions.
+                Join leading enterprises using Poly.ai&apos;s Agent Studio to deliver exceptional AI-powered voice interactions.
               </p>
               <button onClick={() => setIsModalOpen(true)} className="bg-white hover:bg-gray-50 text-purple-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
                 Request Demo
